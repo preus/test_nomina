@@ -1,128 +1,23 @@
 /* 
- * 0.-Misc
- *  0.1.-Import - Reset
- *  0.2.-Variables
- *  0.3.-Funciones
  * 1.-Principal
- *  1.1.-Helpers
  * 20.-Global
  * 21.-Custom
  * 22.-MediaQueries
  */
-/*------------------------- 0.-Misc --------------------*/
-/*------------------------- 0.1.-Import - Reset --------------------*/
-/*@import url('http://fonts.googleapis.com/css?family=Quicksand')*/
-/*global-reset()*/
-/*------------------------- 0.2.-Variables --------------------*/
-/*------------------------- 0.3.-Funciones --------------------*/
 /*------------------------- 1.-Principal --------------------*/
 body,
 html {
   color: #444;
   font-family: Arial;
   font-size: 16px;
+  text-align: center;
   text-transform: uppercase;
   height: 100%;
   width: 100%;
 }
-footer {
-  border-top: 1px dotted #ccc;
-  font-size: 13px;
-  margin: 1em auto;
-  padding-top: 0.5em;
-  text-align: center;
-  width: 90%;
-}
-header {
-  color: #fff;
-  font-family: 'Quicksand', Arial;
-}
-#main-container {
-  clear: both;
-  margin-top: 1em;
-  padding: 0 0.1em !important;
-  width: 100%;
-}
-#main-container #venta_articulos {
-  margin: 0 auto;
-}
-#main-container #venta_articulos table {
-  width: 100%;
-}
-#main-container #venta_articulos table td.format-number {
-  text-align: right;
-}
-#main-container #venta_articulos table thead th:first-child,
-#main-container #venta_articulos table .special {
-  margin: 0 !important;
-  padding: 0 !important;
-  width: 0.4% !important;
-}
-#main-container #venta_articulos #total_venta {
-  font-size: 1.7em;
-  font-weight: bold;
-  margin: 0.5em 0;
-  text-align: right;
-}
-#main-container #venta_penientes {
-  border: 1px solid #222;
-  background-color: rgba(20,20,20,0.8);
-  height: 90%;
-  margin-bottom: 1em;
-  overflow: scroll;
-  padding: 0;
-  position: absolute;
-  width: 20%;
-  z-index: 99;
-}
-#main-container #venta_penientes span.header {
-  background-color: rgba(59,89,152,0.1) !important;
-  color: #fff;
-  display: block;
-  font-weight: bold;
-  padding: 0.5em 0.3em;
-}
-#main-container #venta_penientes .ventas {
-  height: 100%;
-}
-#main-container #venta_penientes label {
-  border: 1px solid #222 !important;
-  color: #fff;
-  cursor: default;
-  display: block;
-  margin: 0.5em 0;
-  padding: 0.3em 0.4em;
-  text-shadow: 2px 2px 1px #222;
-  width: 100%;
-}
-#pnlAlert {
-  bottom: 0;
-  display: block;
-  height: auto;
-  padding: 1em;
-  position: absolute;
-  width: 100%;
-}
-/*------------------------- 1.1.-Helpers --------------------*/
-#pnlCierreCV {
-  border: 1px solid #3f4c6b !important;
-/*bcolor(0.5, 63, 76, 107)*/
-  -webkit-border-radius: 5px;
-  border-radius: 5px;
-  padding: 1em;
-  position: relative;
-  top: 20%;
-}
-#pnlCierreCV label,
-#pnlCierreCV span {
-  font-weight: bold;
-}
-#pnlCierreCV .switch {
-  margin-top: 0.15em;
-  width: 90%;
-}
-#pnlCierreCV .switch label {
-  padding: 0 1em;
+form label {
+  padding-right: 5px;
+  text-align: right !important;
 }
 /*------------------------- 20.-Global --------------------*/
 .alert-box {
@@ -162,6 +57,8 @@ header {
 }
 .darken {
   background-color: rgba(20,20,20,0.7);
+}
+form, .panel {
 }
 .index-primary {
   z-index: 999;
