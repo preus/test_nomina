@@ -1,4 +1,5 @@
-﻿<html>
+﻿<!DOCTYPE html>
+<html lang="es">
 	<head>
 		<link rel='stylesheet' type='text/css' href='css/foundation.min.css'>
 	    <link rel='stylesheet' type='text/css' href='css/font-awesome.css'>

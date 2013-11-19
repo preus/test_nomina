@@ -11,7 +11,6 @@ html {
   font-family: Arial;
   font-size: 16px;
   text-align: center;
-  text-transform: uppercase;
   height: 100%;
   width: 100%;
 }
@@ -173,18 +172,25 @@ table.hovered tr:hover td {
 .top-bar {
   -webkit-box-shadow: 3px 3px 10px #222;
   box-shadow: 3px 3px 10px #222;
+  text-align: left;
 }
 .top-bar,
 .top-bar ul,
 .top-bar a {
-  background-color: #2b4998 !important;
+  background-color: #2b9849 !important;
+}
+.top-bar a:hover, .top-bar .dropdown a:hover {
+  background-color: #2bA849 !important;
 }
 .top-bar .divider {
   border-color: #1b3978 !important;
 }
 .top-bar .dropdown,
 .top-bar .dropdown a {
-  background-color: rgba(59,89,152,0.6) !important;
+  background-color: #2b9849 !important;
+}
+.top-bar .top-bar-title {
+  font-size:1.2em;
 }
 /*------------------------- 22.-MediaQueries --------------------*/
 @media (max-width: 320px) {
