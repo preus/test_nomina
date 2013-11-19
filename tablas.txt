@@ -1,0 +1,54 @@
+create table escuelas(
+	idEscuela INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    clave VARCHAR(100) UNIQUE KEY,
+    direccion VARCHAR(300),
+    telefono1 VARCHAR(15),
+    telefono2 VARCHAR(15),
+    telefono3 VARCHAR(15),
+    director VARCHAR(80),
+    telDir VARCHAR(15),
+    email VARCHAR(60)
+);
+
+create table libros(
+	idLibro  INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    idEscuela INT NOT NULL,
+    nombre VARCHAR(100),
+    palumnos INT,
+    pmaestros INT,
+    FOREIGN KEY(idEscuela) REFERENCES escuelas(idEscuela)
+);
+
+create table asesores(
+	idAsesor INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    idEscuela INT NOT NULL,
+    nombres VARCHAR(30),
+    apaterno VARCHAR(30),
+    amaterno VARCHAR(30),
+    rfc VARCHAR(16) UNIQUE KEY,
+    curp VARCHAR(16) UNIQUE KEY,
+    domicilio VARCHAR(300),
+    colonia VARCHAR(100),
+    municipio VARCHAR(100),
+    localidad VARCHAR(100),
+    telefono VARCHAR(15),
+    celular VARCHAR(20),
+    nacionalidad VARCHAR(50),
+    sexo CHAR(1),
+    gradoEstudios VARCHAR(100),
+    email VARCHAR(60),
+    turno CHAR(1),
+    FOREIGN KEY(idEscuela) REFERENCES escuelas(idEscuela)
+);
+
+create table nominas(
+	idNomina INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    idAsesor INT NOT NULL,
+    faltas INT,
+    squincenal NUMERIC(18,2),
+    descuentos NUMERIC(18,2),
+	sesiones INT,
+	feini DATE,
+	fefin DATE,
+    FOREIGN KEY(idAsesor) REFERENCES asesores(idAsesor)
+);
